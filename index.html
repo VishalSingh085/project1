@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do-App</title>
+  <script src="todo.js">
+  </script>
+  <style>
+    #child1 {
+      margin: 5px;
+      font-weight: 900;
+      color: rgb(208, 26, 26);
+    }
+
+    h2 {
+      font-size: xx-large;
+      font-weight: 900;
+      color: #fff;
+      padding: 10px;
+      background-color: rgb(242, 11, 65);
+      border: 2px solid black;
+
+    }
+
+    h2:hover {
+      background-color: royalblue;
+      border: 2px solid black;
+      color: peach;
+    }
+
+    #main {
+      text-align: center;
+      background-color: antiquewhite;
+    }
+
+    body {
+      background-color: rgb(219, 168, 219);
+    }
+
+    #filterlabel {
+      font-style: oblique;
+      margin: 10px;
+      padding: 5px;
+      font-size: 20px;
+    }
+
+    label:hover {
+      background-color: rgb(150, 26, 233);
+      color: black;
+      border: 1px solid yellow;
+      border-radius: 5px;
+
+    }
+
+    button:hover {
+      background-color: blue;
+      color: #fff;
+    }
+
+    #listelementstyle {
+      background-color: darkkhaki;
+      margin: 10px;
+      padding: 5px;
+      border: 2px solid salmon;
+    }
+
+    #listelementstylecompleted {
+      background-color: greenyellow;
+      margin: 10px;
+      padding: 5px;
+      border: 2px solid salmon;
+    }
+
+    button {
+      border: 1.5px solid black;
+
+
+      font-weight: 700;
+      background-color: green;
+      color: #fff;
+
+    }
+
+    input {
+      border: 2px solid black;
+      border-radius: 5px;
+
+    }
+
+    #child2 {
+      margin: 13px;
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <h2>Todo-App</h2>
+    <div id="child1">
+      <label id="filterlabel" onclick="filtertodo('Incomplete')">Incomplete &nbsp &nbsp &nbsp </label>
+      <label id="filterlabel" onclick="filtertodo('Completed')">Completed &nbsp &nbsp &nbsp</label>
+      <label id="filterlabel" onclick="filtertodo('All')">All</label>
+    </div><br>
+
+    <div id="child2">
+      <button onclick="updatefrontend()">Mock</button>
+
+      <input id="todoinput" type="text" />
+      <button onclick="addtodo()">Add new Todo</button>
+      <ul id="todolist">
+      </ul>
+      <!-- <li>
+        //   <input type="checkbox" onchange="onchackedchange"/>
+        //   </li>-->
+      </ul>
+    </div>
+</body>
+
+</html>
